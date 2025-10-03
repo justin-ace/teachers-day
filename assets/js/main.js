@@ -15,19 +15,6 @@ const flowerImages = [
     "I love you so much, Monaaa ❤"
   ];
 
-const music = document.getElementById("bgMusic");
-    const musicBtn = document.getElementById("musicBtn");
-
-    musicBtn.addEventListener("click", () => {
-      if (music.muted) {
-        music.muted = false;
-        musicBtn.textContent = "🔊 Mute";
-      } else {
-        music.muted = true;
-        musicBtn.textContent = "🔇 Unmute";
-      }
-});
-
   function createFlower() {
     const flower = document.createElement('div');
     flower.classList.add('flower');
@@ -66,7 +53,6 @@ const music = document.getElementById("bgMusic");
     document.getElementById("popup").classList.remove("active");
   }
 
-
   function showNote(x, y) {
     const note = document.createElement('div');
     note.classList.add('note');
@@ -80,6 +66,20 @@ const music = document.getElementById("bgMusic");
       note.remove();
     }, 2000);
   }
+
+  const music = document.getElementById("bgMusic");
+    const musicBtn = document.getElementById("musicBtn");
+
+    musicBtn.addEventListener("click", () => {
+      if (music.muted) {
+        music.muted = false;
+        musicBtn.textContent = "🔊 Mute";
+      } else {
+        music.muted = true;
+        musicBtn.textContent = "🔇 Unmute";
+      }
+    });
+
     function createSparkle() {
       const sparkle = document.createElement('div');
       sparkle.classList.add('sparkle');
