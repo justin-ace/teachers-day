@@ -175,3 +175,19 @@
       max-width: 90px;
     }
   }
+.sparkle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle 3s infinite;
+    pointer-events: none;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.3); }
+  }
+
