@@ -15,6 +15,19 @@ const flowerImages = [
     "I love you so much, Monaaa ❤"
   ];
 
+const music = document.getElementById("bgMusic");
+    const musicBtn = document.getElementById("musicBtn");
+
+    musicBtn.addEventListener("click", () => {
+      if (music.muted) {
+        music.muted = false;
+        musicBtn.textContent = "🔊 Mute";
+      } else {
+        music.muted = true;
+        musicBtn.textContent = "🔇 Unmute";
+      }
+});
+
   function createFlower() {
     const flower = document.createElement('div');
     flower.classList.add('flower');
@@ -53,6 +66,7 @@ const flowerImages = [
     document.getElementById("popup").classList.remove("active");
   }
 
+
   function showNote(x, y) {
     const note = document.createElement('div');
     note.classList.add('note');
@@ -66,3 +80,14 @@ const flowerImages = [
       note.remove();
     }, 2000);
   }
+    function createSparkle() {
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+      sparkle.style.left = Math.random() * window.innerWidth + 'px';
+      sparkle.style.top = Math.random() * window.innerHeight + 'px';
+      sparkle.style.animationDuration = (2 + Math.random() * 3) + 's';
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 4000);
+    }
+
+    setInterval(createSparkle, 500);
