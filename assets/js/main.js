@@ -66,7 +66,7 @@ const flowerImages = [
       note.remove();
     }, 2000);
   }
-
+/*
   const music = document.getElementById("bgMusic");
     const musicBtn = document.getElementById("musicBtn");
 
@@ -78,7 +78,7 @@ const flowerImages = [
         music.muted = true;
         musicBtn.textContent = "🔇 Unmute";
       }
-    });
+    });*/
 
     function createSparkle() {
       const sparkle = document.createElement('div');
@@ -91,3 +91,4 @@ const flowerImages = [
     }
 
     setInterval(createSparkle, 500);
+
