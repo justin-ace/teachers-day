@@ -139,11 +139,11 @@ function openLetter(l){
   document.getElementById("dt").textContent = "Dear " + HER + ",";
   body.textContent = ""; sign.textContent = "";
   dlg.showModal();
-  if(still){ body.textContent = l.text; sign.textContent = "Love you, Always.\n-" + ME; return; }
+  if(still){ body.textContent = l.text; sign.textContent = "Love you always.\n-" + ME; return; }
   let i = 0;
   timer = setInterval(()=>{
     body.textContent = l.text.slice(0, ++i);
-    if(i >= l.text.length){ clearInterval(timer); sign.textContent = "Love you, Always.\n-" + ME; }
+    if(i >= l.text.length){ clearInterval(timer); sign.textContent = "Love you always.\n-" + ME; }
   }, 28);
 }
 function shut(){ clearInterval(timer); dlg.close(); }
